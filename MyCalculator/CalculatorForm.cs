@@ -1,13 +1,19 @@
 ﻿using System;
 using System.Windows.Forms;
+using CommonLibrary;
 
 namespace MyCalculator
 {
     public partial class CalculatorForm : Form
     {
+        private Calculator Calculator { get; set; }
+        private IOperation2Operands Operation2Operands { get; set; }
+        private IOperation1Operand Operation1Operand { get; set; }
+
         public CalculatorForm()
         {
             InitializeComponent();
+            Calculator = new CalculatorCreator().CreateCalculator();
         }
 
         private void btNumber_Click(object sender, EventArgs e)
@@ -19,11 +25,11 @@ namespace MyCalculator
         private void btC_Click(object sender, EventArgs e)
         {
             tbText.Clear();
-            number1 = 0;
-            number2 = 0;
-            operation = "";
-            result = "";
-            isValid = false;
+            Operation2Operands = null;
+            Calculator.FirstOperand = 0;
+            Calculator.SecondOperand = 0;
+            Calculator.Result = 0;
+            Calculator.IsExistFirstOperand = false;
         }
 
         private void btRemove_Click(object sender, EventArgs e)
@@ -37,78 +43,39 @@ namespace MyCalculator
             if (tbText.Text.Length > 0)
             {
                 Button bt = (Button)sender;
-                if (operation == "")
+                if (Operation2Operands == null)
                 {
-                    number1 = Convert.ToDouble(tbText.Text);
-                    isValid = true;
+                    Calculator.FirstOperand = Convert.ToDouble(tbText.Text);
+                    Calculator.IsExistFirstOperand = true;
                 }
                 else
                 {
-                    switch (operation)
-                    {
-                        case "+":
-                            number1 += Convert.ToDouble(tbText.Text);
-                            break;
-                        case "-":
-                            number1 -= Convert.ToDouble(tbText.Text);
-                            break;
-                        case "x":
-                            number1 *= Convert.ToDouble(tbText.Text);
-                            break;
-                        case "÷":
-                            try
-                            {
-                                number1 /= Convert.ToDouble(tbText.Text);
-                            }
-                            catch (Exception)
-                            {
-                                tbText.Text = "Cannot divide by zero";
-                            }
-                            break;
-                    }
+                    Calculator.SecondOperand = Convert.ToDouble(tbText.Text);
+                    Calculator.FirstOperand = Operation2Operands.Operate(Calculator.FirstOperand, Calculator.SecondOperand);
                 }
-                operation = bt.Text;
-                tbText.Clear();
+
+                Operation2Operands = Calculator.Operations1[bt.Text];
+                tbText.Clear() ;
             }
         }
 
         private void btResult_Click(object sender, EventArgs e)
         {
-            if (isValid)
+            if (Calculator.IsExistFirstOperand)
             {
                 if (tbText.Text.Length > 0)
                 {
-                    number2 = Convert.ToDouble(tbText.Text);
+                    Calculator.SecondOperand = Convert.ToDouble(tbText.Text);
                     tbText.Clear();
-                    isValid = false;
-                    switch (operation)
-                    {
-                        case "+":
-                            result = (number1 + number2).ToString();
-                            break;
-                        case "-":
-                            result = (number1 - number2).ToString();
-                            break;
-                        case "x":
-                            result = (number1 * number2).ToString();
-                            break;
-                        case "÷":
-                            if (number2 != 0)
-                            {
-                                result = (number1 / number2).ToString();
-                            }
-                            else result = "Cannot divide by zero";
-                            break;
-                        default:
-                            break;
-                    }
-                    tbText.Text = result;
+                    Calculator.IsExistFirstOperand = false;
+                    Calculator.Result = Operation2Operands.Operate(Calculator.FirstOperand, Calculator.SecondOperand);
+                    tbText.Text = Calculator.Result.ToString();
                 }
                 else
                 {
-                    tbText.Text = number1.ToString();
+                    tbText.Text = Calculator.FirstOperand.ToString();
                 }
-                operation = "";
+                Operation2Operands = null;
             }
         }
 
@@ -124,7 +91,9 @@ namespace MyCalculator
         {
             if (tbText.Text.Length > 0)
             {
-                tbText.Text = Math.Sqrt(Convert.ToDouble(tbText.Text)).ToString();
+                Button bt = (Button)sender;
+                Operation1Operand = Calculator.Operations2[bt.Text];
+                tbText.Text = Operation1Operand.Operate(Convert.ToDouble(tbText.Text)).ToString();
             }
         }
 
@@ -139,7 +108,6 @@ namespace MyCalculator
                 else tbText.Text = tbText.Text.Insert(0, "-");
             }
         }
-
         
     }
 }

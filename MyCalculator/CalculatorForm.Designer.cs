@@ -54,18 +54,21 @@ namespace MyCalculator
             // 
             // tbText
             // 
+            this.tbText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tbText.Location = new System.Drawing.Point(2, 1);
-            this.tbText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbText.Margin = new System.Windows.Forms.Padding(4);
             this.tbText.Name = "tbText";
+            this.tbText.ReadOnly = true;
             this.tbText.Size = new System.Drawing.Size(364, 27);
             this.tbText.TabIndex = 0;
+            this.tbText.TabStop = false;
             this.tbText.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btC
             // 
             this.btC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btC.Location = new System.Drawing.Point(2, 36);
-            this.btC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btC.Margin = new System.Windows.Forms.Padding(4);
             this.btC.Name = "btC";
             this.btC.Size = new System.Drawing.Size(85, 65);
             this.btC.TabIndex = 1;
@@ -78,7 +81,7 @@ namespace MyCalculator
             // 
             this.bt6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.bt6.Location = new System.Drawing.Point(188, 182);
-            this.bt6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt6.Margin = new System.Windows.Forms.Padding(4);
             this.bt6.Name = "bt6";
             this.bt6.Size = new System.Drawing.Size(85, 65);
             this.bt6.TabIndex = 2;
@@ -91,7 +94,7 @@ namespace MyCalculator
             // 
             this.btSubtract.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btSubtract.Location = new System.Drawing.Point(281, 182);
-            this.btSubtract.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btSubtract.Margin = new System.Windows.Forms.Padding(4);
             this.btSubtract.Name = "btSubtract";
             this.btSubtract.Size = new System.Drawing.Size(85, 65);
             this.btSubtract.TabIndex = 3;
@@ -104,7 +107,7 @@ namespace MyCalculator
             // 
             this.btMultiply.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btMultiply.Location = new System.Drawing.Point(282, 109);
-            this.btMultiply.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btMultiply.Margin = new System.Windows.Forms.Padding(4);
             this.btMultiply.Name = "btMultiply";
             this.btMultiply.Size = new System.Drawing.Size(85, 65);
             this.btMultiply.TabIndex = 4;
@@ -117,7 +120,7 @@ namespace MyCalculator
             // 
             this.bt9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.bt9.Location = new System.Drawing.Point(189, 109);
-            this.bt9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt9.Margin = new System.Windows.Forms.Padding(4);
             this.bt9.Name = "bt9";
             this.bt9.Size = new System.Drawing.Size(85, 65);
             this.bt9.TabIndex = 5;
@@ -130,7 +133,7 @@ namespace MyCalculator
             // 
             this.bt8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.bt8.Location = new System.Drawing.Point(95, 109);
-            this.bt8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt8.Margin = new System.Windows.Forms.Padding(4);
             this.bt8.Name = "bt8";
             this.bt8.Size = new System.Drawing.Size(85, 65);
             this.bt8.TabIndex = 6;
@@ -143,7 +146,7 @@ namespace MyCalculator
             // 
             this.bt7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.bt7.Location = new System.Drawing.Point(2, 109);
-            this.bt7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt7.Margin = new System.Windows.Forms.Padding(4);
             this.bt7.Name = "bt7";
             this.bt7.Size = new System.Drawing.Size(85, 65);
             this.bt7.TabIndex = 7;
@@ -156,7 +159,7 @@ namespace MyCalculator
             // 
             this.btDivide.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btDivide.Location = new System.Drawing.Point(282, 36);
-            this.btDivide.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btDivide.Margin = new System.Windows.Forms.Padding(4);
             this.btDivide.Name = "btDivide";
             this.btDivide.Size = new System.Drawing.Size(85, 65);
             this.btDivide.TabIndex = 8;
@@ -169,7 +172,7 @@ namespace MyCalculator
             // 
             this.btRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btRemove.Location = new System.Drawing.Point(189, 36);
-            this.btRemove.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btRemove.Margin = new System.Windows.Forms.Padding(4);
             this.btRemove.Name = "btRemove";
             this.btRemove.Size = new System.Drawing.Size(85, 65);
             this.btRemove.TabIndex = 9;
@@ -182,7 +185,7 @@ namespace MyCalculator
             // 
             this.btRoot.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btRoot.Location = new System.Drawing.Point(95, 36);
-            this.btRoot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btRoot.Margin = new System.Windows.Forms.Padding(4);
             this.btRoot.Name = "btRoot";
             this.btRoot.Size = new System.Drawing.Size(85, 65);
             this.btRoot.TabIndex = 10;
@@ -195,7 +198,7 @@ namespace MyCalculator
             // 
             this.bt5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.bt5.Location = new System.Drawing.Point(95, 182);
-            this.bt5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt5.Margin = new System.Windows.Forms.Padding(4);
             this.bt5.Name = "bt5";
             this.bt5.Size = new System.Drawing.Size(85, 65);
             this.bt5.TabIndex = 11;
@@ -208,7 +211,7 @@ namespace MyCalculator
             // 
             this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button11.Location = new System.Drawing.Point(95, 328);
-            this.button11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button11.Margin = new System.Windows.Forms.Padding(4);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(85, 65);
             this.button11.TabIndex = 12;
@@ -221,7 +224,7 @@ namespace MyCalculator
             // 
             this.btSign.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btSign.Location = new System.Drawing.Point(2, 328);
-            this.btSign.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btSign.Margin = new System.Windows.Forms.Padding(4);
             this.btSign.Name = "btSign";
             this.btSign.Size = new System.Drawing.Size(85, 65);
             this.btSign.TabIndex = 13;
@@ -234,7 +237,7 @@ namespace MyCalculator
             // 
             this.bt1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.bt1.Location = new System.Drawing.Point(2, 255);
-            this.bt1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt1.Margin = new System.Windows.Forms.Padding(4);
             this.bt1.Name = "bt1";
             this.bt1.Size = new System.Drawing.Size(85, 65);
             this.bt1.TabIndex = 14;
@@ -247,7 +250,7 @@ namespace MyCalculator
             // 
             this.bt4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.bt4.Location = new System.Drawing.Point(2, 182);
-            this.bt4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt4.Margin = new System.Windows.Forms.Padding(4);
             this.bt4.Name = "bt4";
             this.bt4.Size = new System.Drawing.Size(85, 65);
             this.bt4.TabIndex = 15;
@@ -260,7 +263,7 @@ namespace MyCalculator
             // 
             this.bt3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.bt3.Location = new System.Drawing.Point(189, 255);
-            this.bt3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt3.Margin = new System.Windows.Forms.Padding(4);
             this.bt3.Name = "bt3";
             this.bt3.Size = new System.Drawing.Size(85, 65);
             this.bt3.TabIndex = 16;
@@ -273,7 +276,7 @@ namespace MyCalculator
             // 
             this.btSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btSum.Location = new System.Drawing.Point(281, 255);
-            this.btSum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btSum.Margin = new System.Windows.Forms.Padding(4);
             this.btSum.Name = "btSum";
             this.btSum.Size = new System.Drawing.Size(85, 65);
             this.btSum.TabIndex = 17;
@@ -286,7 +289,7 @@ namespace MyCalculator
             // 
             this.btResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btResult.Location = new System.Drawing.Point(281, 328);
-            this.btResult.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btResult.Margin = new System.Windows.Forms.Padding(4);
             this.btResult.Name = "btResult";
             this.btResult.Size = new System.Drawing.Size(85, 65);
             this.btResult.TabIndex = 18;
@@ -299,7 +302,7 @@ namespace MyCalculator
             // 
             this.btPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btPoint.Location = new System.Drawing.Point(188, 328);
-            this.btPoint.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btPoint.Margin = new System.Windows.Forms.Padding(4);
             this.btPoint.Name = "btPoint";
             this.btPoint.Size = new System.Drawing.Size(85, 65);
             this.btPoint.TabIndex = 19;
@@ -312,7 +315,7 @@ namespace MyCalculator
             // 
             this.bt2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.bt2.Location = new System.Drawing.Point(96, 255);
-            this.bt2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt2.Margin = new System.Windows.Forms.Padding(4);
             this.bt2.Name = "bt2";
             this.bt2.Size = new System.Drawing.Size(85, 65);
             this.bt2.TabIndex = 20;
